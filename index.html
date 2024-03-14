@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantt Chart Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Gantt Chart Generator</h2>
+        <form action="generate_chart.php" method="POST">
+            <label for="task_name">Task Name:</label>
+            <input type="text" id="task_name" name="task_name[]" required>
+            <label for="start_date">Start Date:</label>
+            <input type="date" id="start_date" name="start_date[]" required>
+            <label for="end_date">End Date:</label>
+            <input type="date" id="end_date" name="end_date[]" required>
+            <label for="dependency">Dependency (Task Name):</label>
+            <input type="text" id="dependency" name="dependency[]">
+            <button type="button" onclick="addTask()">Add Task</button>
+            <button type="submit">Generate Chart</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
